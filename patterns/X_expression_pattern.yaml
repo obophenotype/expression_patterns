@@ -1,0 +1,44 @@
+pattern_name: expression_pattern_of_x
+
+classes: 
+    complete expression pattern: CARO_ # TBA
+    sequence_feature: SO_
+    cell: FBbt  # CL for generic
+    
+relations:
+    expresses: RO_
+    part of: BFO_0000050
+
+vars: 
+    expressed_feature: "'sequence_feature'"
+
+name:
+    text: "%s expression pattern"
+    vars: 
+        - expressed_feature
+
+def:
+    text: "The sum of all cells in single organism that express %s"
+    vars:
+        - expressed_feature
+
+comment:
+    text: "This term covers expressing cells at all stages - but only during the time that they express %s."
+    vars:
+        - expressed_feature
+
+owl_axioms:
+    - equivalentTo:
+        text: "'complete expression pattern' that 'expresses' some %s"
+        vars:
+            - expressed_feature
+    - GCI: 
+        text: "'cell' that 'expresses' some %s subClassOf 'part of' some %s"
+        vars:
+            - expressed_feature
+            - self # Extension to pattern language needed.
+    - GCI:
+        text: "'regional expression pattern' that 'expresses' some %s SubClassOf 'part of' some ('complete expression pattern' that 'expresses' some %s)"
+        vars:
+            - expressed_feature
+    

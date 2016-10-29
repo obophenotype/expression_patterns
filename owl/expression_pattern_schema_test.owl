@@ -1,0 +1,116 @@
+Prefix(:=<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl>
+
+Declaration(Class(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_3eb2bc65_12f5_45b5_a583_3941043c320c>))
+Declaration(Class(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_5a796dd1_9c5e_4c4c_8c3f_e137b47564cd>))
+Declaration(Class(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_6a36211a_bea2_4e9f_b9c7_0d2bf4e8f064>))
+Declaration(Class(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_7922d586_af8b_43a4_a00f_fee394e36335>))
+Declaration(Class(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_938d3ea6_967c_4e0f_8ec8_8f4b5751fee4>))
+Declaration(Class(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_9f047b59_6f52_4f39_ab31_6e9c19f5e070>))
+Declaration(Class(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_a1d8a212_0040_4e18_bf73_e609df0d7c90>))
+Declaration(Class(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_a86fe2c9_d932_4c0d_ab18_8b6b38d1181b>))
+Declaration(Class(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_bf7e8f8b_65bd_4bdf_bd22_5291703349c7>))
+Declaration(Class(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_efeb3a96_00cc_4618_a5fa_edf3a8cffebc>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_8e509968_c7ad_4be3_81a9_56f03fd9ce6d>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_e2c03bf0_a521_4eb7_bacc_0d52bc932667>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_67a82610_722e_44de_bf02_01ac5cc83c99>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_70f2ddd6_19fb_4160_8b71_b0d653fc1647>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_8e509968_c7ad_4be3_81a9_56f03fd9ce6d> (expresses)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_8e509968_c7ad_4be3_81a9_56f03fd9ce6d> "expresses")
+
+# Object Property: <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_e2c03bf0_a521_4eb7_bacc_0d52bc932667> (part of)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_e2c03bf0_a521_4eb7_bacc_0d52bc932667> "part of")
+TransitiveObjectProperty(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_e2c03bf0_a521_4eb7_bacc_0d52bc932667>)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_3eb2bc65_12f5_45b5_a583_3941043c320c> (expression pattern of X in adult brain)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_3eb2bc65_12f5_45b5_a583_3941043c320c> "expression pattern of X in adult brain")
+EquivalentClasses(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_3eb2bc65_12f5_45b5_a583_3941043c320c> ObjectIntersectionOf(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_a86fe2c9_d932_4c0d_ab18_8b6b38d1181b> ObjectSomeValuesFrom(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_8e509968_c7ad_4be3_81a9_56f03fd9ce6d> <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_6a36211a_bea2_4e9f_b9c7_0d2bf4e8f064>) ObjectSomeValuesFrom(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_e2c03bf0_a521_4eb7_bacc_0d52bc932667> <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_bf7e8f8b_65bd_4bdf_bd22_5291703349c7>)))
+
+# Class: <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_5a796dd1_9c5e_4c4c_8c3f_e137b47564cd> (complete expression pattern)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_5a796dd1_9c5e_4c4c_8c3f_e137b47564cd> "complete expression pattern")
+SubClassOf(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_5a796dd1_9c5e_4c4c_8c3f_e137b47564cd> <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_efeb3a96_00cc_4618_a5fa_edf3a8cffebc>)
+
+# Class: <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_6a36211a_bea2_4e9f_b9c7_0d2bf4e8f064> (feature X)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_6a36211a_bea2_4e9f_b9c7_0d2bf4e8f064> "feature X")
+SubClassOf(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_6a36211a_bea2_4e9f_b9c7_0d2bf4e8f064> <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_7922d586_af8b_43a4_a00f_fee394e36335>)
+
+# Class: <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_7922d586_af8b_43a4_a00f_fee394e36335> (feature)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_7922d586_af8b_43a4_a00f_fee394e36335> "feature")
+
+# Class: <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_938d3ea6_967c_4e0f_8ec8_8f4b5751fee4> (expression pattern of X)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_938d3ea6_967c_4e0f_8ec8_8f4b5751fee4> "expression pattern of X")
+EquivalentClasses(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_938d3ea6_967c_4e0f_8ec8_8f4b5751fee4> ObjectIntersectionOf(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_5a796dd1_9c5e_4c4c_8c3f_e137b47564cd> ObjectSomeValuesFrom(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_8e509968_c7ad_4be3_81a9_56f03fd9ce6d> <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_6a36211a_bea2_4e9f_b9c7_0d2bf4e8f064>)))
+
+# Class: <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_9f047b59_6f52_4f39_ab31_6e9c19f5e070> (neuron)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_9f047b59_6f52_4f39_ab31_6e9c19f5e070> "neuron")
+SubClassOf(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_9f047b59_6f52_4f39_ab31_6e9c19f5e070> <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_a1d8a212_0040_4e18_bf73_e609df0d7c90>)
+
+# Class: <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_a1d8a212_0040_4e18_bf73_e609df0d7c90> (cell)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_a1d8a212_0040_4e18_bf73_e609df0d7c90> "cell")
+
+# Class: <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_a86fe2c9_d932_4c0d_ab18_8b6b38d1181b> (regional expression pattern)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_a86fe2c9_d932_4c0d_ab18_8b6b38d1181b> "regional expression pattern")
+EquivalentClasses(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_a86fe2c9_d932_4c0d_ab18_8b6b38d1181b> ObjectIntersectionOf(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_efeb3a96_00cc_4618_a5fa_edf3a8cffebc> ObjectSomeValuesFrom(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_e2c03bf0_a521_4eb7_bacc_0d52bc932667> <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_efeb3a96_00cc_4618_a5fa_edf3a8cffebc>)))
+SubClassOf(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_a86fe2c9_d932_4c0d_ab18_8b6b38d1181b> ObjectSomeValuesFrom(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_e2c03bf0_a521_4eb7_bacc_0d52bc932667> <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_5a796dd1_9c5e_4c4c_8c3f_e137b47564cd>))
+
+# Class: <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_bf7e8f8b_65bd_4bdf_bd22_5291703349c7> (adult brain)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_bf7e8f8b_65bd_4bdf_bd22_5291703349c7> "adult brain")
+
+# Class: <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_efeb3a96_00cc_4618_a5fa_edf3a8cffebc> (expression pattern)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_efeb3a96_00cc_4618_a5fa_edf3a8cffebc> "expression pattern")
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_67a82610_722e_44de_bf02_01ac5cc83c99> (neuron A)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_67a82610_722e_44de_bf02_01ac5cc83c99> "neuron A")
+ClassAssertion(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_9f047b59_6f52_4f39_ab31_6e9c19f5e070> <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_67a82610_722e_44de_bf02_01ac5cc83c99>)
+ClassAssertion(ObjectSomeValuesFrom(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_8e509968_c7ad_4be3_81a9_56f03fd9ce6d> <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_6a36211a_bea2_4e9f_b9c7_0d2bf4e8f064>) <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_67a82610_722e_44de_bf02_01ac5cc83c99>)
+ClassAssertion(ObjectSomeValuesFrom(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_e2c03bf0_a521_4eb7_bacc_0d52bc932667> <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_bf7e8f8b_65bd_4bdf_bd22_5291703349c7>) <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_67a82610_722e_44de_bf02_01ac5cc83c99>)
+
+# Individual: <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_70f2ddd6_19fb_4160_8b71_b0d653fc1647> (feature_X_Fu_lab_1)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_70f2ddd6_19fb_4160_8b71_b0d653fc1647> "feature_X_Fu_lab_1")
+ClassAssertion(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_a86fe2c9_d932_4c0d_ab18_8b6b38d1181b> <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_70f2ddd6_19fb_4160_8b71_b0d653fc1647>)
+ClassAssertion(ObjectSomeValuesFrom(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_8e509968_c7ad_4be3_81a9_56f03fd9ce6d> <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_6a36211a_bea2_4e9f_b9c7_0d2bf4e8f064>) <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_70f2ddd6_19fb_4160_8b71_b0d653fc1647>)
+ClassAssertion(ObjectSomeValuesFrom(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_e2c03bf0_a521_4eb7_bacc_0d52bc932667> <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_bf7e8f8b_65bd_4bdf_bd22_5291703349c7>) <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_70f2ddd6_19fb_4160_8b71_b0d653fc1647>)
+
+
+SubClassOf(ObjectIntersectionOf(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_a1d8a212_0040_4e18_bf73_e609df0d7c90> ObjectSomeValuesFrom(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_8e509968_c7ad_4be3_81a9_56f03fd9ce6d> <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_6a36211a_bea2_4e9f_b9c7_0d2bf4e8f064>)) ObjectSomeValuesFrom(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_e2c03bf0_a521_4eb7_bacc_0d52bc932667> <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_938d3ea6_967c_4e0f_8ec8_8f4b5751fee4>))
+SubClassOf(ObjectIntersectionOf(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_a1d8a212_0040_4e18_bf73_e609df0d7c90> ObjectSomeValuesFrom(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_8e509968_c7ad_4be3_81a9_56f03fd9ce6d> <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_6a36211a_bea2_4e9f_b9c7_0d2bf4e8f064>) ObjectSomeValuesFrom(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_e2c03bf0_a521_4eb7_bacc_0d52bc932667> <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_bf7e8f8b_65bd_4bdf_bd22_5291703349c7>)) ObjectSomeValuesFrom(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_e2c03bf0_a521_4eb7_bacc_0d52bc932667> <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_3eb2bc65_12f5_45b5_a583_3941043c320c>))
+SubClassOf(ObjectIntersectionOf(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_a86fe2c9_d932_4c0d_ab18_8b6b38d1181b> ObjectSomeValuesFrom(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_8e509968_c7ad_4be3_81a9_56f03fd9ce6d> <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_6a36211a_bea2_4e9f_b9c7_0d2bf4e8f064>)) ObjectSomeValuesFrom(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_e2c03bf0_a521_4eb7_bacc_0d52bc932667> <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_938d3ea6_967c_4e0f_8ec8_8f4b5751fee4>))
+SubClassOf(ObjectIntersectionOf(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_a86fe2c9_d932_4c0d_ab18_8b6b38d1181b> ObjectSomeValuesFrom(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_8e509968_c7ad_4be3_81a9_56f03fd9ce6d> <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_6a36211a_bea2_4e9f_b9c7_0d2bf4e8f064>) ObjectSomeValuesFrom(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_e2c03bf0_a521_4eb7_bacc_0d52bc932667> <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_bf7e8f8b_65bd_4bdf_bd22_5291703349c7>)) ObjectSomeValuesFrom(<http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_e2c03bf0_a521_4eb7_bacc_0d52bc932667> <http://www.semanticweb.org/dosumis/ontologies/2016/9/expression_pattern_schema_test.owl/scratch_3eb2bc65_12f5_45b5_a583_3941043c320c>))
+)
