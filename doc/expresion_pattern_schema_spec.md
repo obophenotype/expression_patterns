@@ -4,8 +4,12 @@ Expression data can take many forms:  Annotations with ontology terms; expressio
 
 The aim of this site is to document semantic patterns that can be used to relate annotations to images, samples or drawn from papers so that the data from all of them can be integrated into a queryable whole.
 
-For example, 
+Example use cases:
 
+* Querying for genes expressed in some specified structure
+* Finding images of the expression pattern of some specified gene or transgene
+* Finding images of expression patterns
+* Finding images of expression pattern fragments.
 
 ## Defining expression patterns
 
@@ -13,9 +17,10 @@ We distinguish between an expression pattern and a localization pattern:
 
 An expression pattern consists of the mereological sum of all cells expressing some specific gene product in an organism or in some specified region of an organism.  A localization pattern is the pattern of localization of a gene product at the cellular or or subcellular level. It may include non-cellular structures and structures distant from the site of expression.  
 
-We define 'expresses': X expresses Y iff:  Y is a [gene](http://www.ebi.ac.uk/ols/ontologies/so/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FSO_0000704) X is a cell or a cellular anatomical structure.  (['gene expression'](http://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FGO_0010467) and 'has input' some Y) 'occurs' in all (cell that 'part of' Y.
+We define 'expresses': X expresses Y iff:  Y is a [gene](http://www.ebi.ac.uk/ols/ontologies/so/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FSO_0000704) X is a cell or a cellular anatomical structure.  (['gene expression'](http://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FGO_0010467) and 'has input' some Y) 'occurs' in all (cell that 'part of' Y).
 
-An expression pattern is binary 
+i.e. at the cellular level, and expression pattern is binary. 
+
 We can distinguish a whole expression pattern from a regional expression pattern.  The former consists of all cells in an animal that express a specific gene product. The latter consists of all cells in some specific anatomical structure that express a specific gene product.  For example the regional expression pattern of the Notch gene in the adult brain is the the mereological sum of all cells in the adult brain that express Notch.
 
 'complete expression pattern of X:  The mereological sum of all cells in an organism (at all stages) that express X.
@@ -27,11 +32,6 @@ GCI: 'regional expression pattern' and (expresses some 'feature X') SubClassOf '
 EquivalentTo: 'regional expression pattern' that (expresses some X) and ('part of'^^ some 'adult brain')
 GCI: 'regional expression pattern' and (expresses some 'feature X') and ('part of' some 'adult brain') SubClassOf 'part of' some 'expression pattern of X in adult brain'
 GCI: cell and (expresses some 'feature X') and ('part of' some 'adult brain') SubClassOf 'part of' some 'expression pattern of X in adult brain'
-
-
-A test ontology may be found here:
-
-A set of patterns (using DOSDP) are defined here:
 
 
 ## Mapping from database tag-value annotations
@@ -47,6 +47,16 @@ Annotation:  'RNA product of gene X' - 'Cell class Y' -> OWL:
 
 Annotation: 'RNA product of gene X'  - 'multicellular anatomical structure Y' -> OWL":
 'expression pattern of gene X' SubClassOf overlaps some 'multicellular anatomical structure Y'
+
+*Querying for genes expressed in structure X:*
+
+'expression pattern' that overlaps some X
+
+*Querying for genes expressed in cell Y:*
+
+'expression pattern' that has_part some Y
+
+
 
 
 
