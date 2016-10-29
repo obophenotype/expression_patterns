@@ -11,7 +11,7 @@ Example use cases:
 
 # About this repo
 
-* Spec drafts live in [doc]()
-* Design patterns (DOSDPs) live in [patterns]()
-* OWL test ontologies live in [patterns]()
-* A draft paper is taking shape in [papers]().  
+/doc -  Spec drafts 
+/patterns: - Design patterns (DOSDPs) live in []()
+/owl - OWL test ontologies live in [patterns]()
+/papers - A draft paper  
