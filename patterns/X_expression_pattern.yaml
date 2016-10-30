@@ -2,11 +2,11 @@ pattern_name: expression_pattern_of_x
 
 classes: 
     complete expression pattern: CARO_ # TBA
-    sequence_feature: SO_
+    gene: SO_
     cell: FBbt  # CL for generic
     
 relations:
-    expresses: RO_
+    'ubiquitously expresses': RO_
     part of: BFO_0000050
 
 vars: 
@@ -29,7 +29,7 @@ comment:
 
 owl_axioms:
     - equivalentTo:
-        text: "'complete expression pattern' that 'expresses' some %s"
+        text: "'complete expression pattern' that 'ubiquitously expresses' some %s"
         vars:
             - expressed_feature
     - GCI: 
@@ -38,7 +38,7 @@ owl_axioms:
             - expressed_feature
             - self # Extension to pattern language needed.
     - GCI:
-        text: "'regional expression pattern' that 'expresses' some %s SubClassOf 'part of' some ('complete expression pattern' that 'expresses' some %s)"
+        text: "'regional expression pattern' that ''ubiquitously expresses' some %s SubClassOf 'part of' some ('complete expression pattern' that 'ubiquitously expresses' some %s)"
         vars:
             - expressed_feature
     
