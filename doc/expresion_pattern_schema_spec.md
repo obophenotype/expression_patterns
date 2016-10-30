@@ -23,22 +23,22 @@ We distinguish between an expression pattern and a localization pattern:
 An expression pattern consists of the mereological sum of all cells expressing some specific gene product in an organism or in some specified region of an organism.  A localization pattern is the pattern of localization of a gene product at the cellular or or subcellular level. It may include non-cellular structures and structures distant from the site of expression.  
 
 
-We define 'expresses': Y expresses X if and only if there is a gene expression process (GO:0010467) that occurs in y and x is a gene (or transgene) that is transcribed into a transcript as part of that gene expression process.
+We define the relations:
 
-X ubiquitously expresses Y iff:  Y is a [gene](http://www.ebi.ac.uk/ols/ontologies/so/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FSO_0000704) X a multicellular anatomical structure.  
-(['gene expression'](http://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FGO_0010467) and 'has input' some Y) 'occurs' in Y.
-subPropertyOf expresses
+* 'expresses': Y expresses X if and only if there is a gene expression process (GO:0010467) that occurs in y and x is a gene (or transgene) that is transcribed into a transcript as part of that gene expression process.
+
+* X ubiquitously expresses Y iff:  Y is a [gene](http://www.ebi.ac.uk/ols/ontologies/so/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FSO_0000704) X a multicellular anatomical structure. (['gene expression'](http://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FGO_0010467) and 'has input' Y) 'occurs' in (all cells that are part of X)
+   * subPropertyOf expresses
 
 i.e. at the cellular level, an expression pattern is binary.   Note that 'expresses' applies if just one expressing cell is present.   So if X and Y are multicellular structures and X overlaps Y and X ubiquitously expresses gene A then we can (reasonably safely^) infer:
 
-overlaps o 'ubiquitously expresses' SubPropertyOf expresses
+* overlaps o 'ubiquitously expresses' SubPropertyOf expresses
 
 (^ The one danger here is that the overlap is between non-cellular components of X and Y).
 
-
 We can distinguish a whole expression pattern from a regional expression pattern.  The former consists of all cells in an animal that express a specific gene product. The latter consists of all cells in some specific anatomical structure that express a specific gene product.  For example the regional expression pattern of the Notch gene in the adult brain is the the mereological sum of all cells in the adult brain that express Notch.
 
-'complete expression pattern of X:  The mereological sum of all cells in an organism (at all stages) that express X.
+'complete expression pattern of X':  The mereological sum of all cells in an organism (at all stages) that express X.
 EquivalentTo: 'complete expression pattern' that 'EquivalentTo expresses' some X
 GCI: cell and (expresses some X) SubClassOf 'part of' some 'expression pattern of X'
 GCI: 'regional expression pattern' and (ubiquitously_expresses some 'feature X') SubClassOf 'part of' some 'expression pattern of X'
@@ -48,6 +48,7 @@ EquivalentTo: 'regional expression pattern' that ('ubiquitously expresses' some 
 GCI: 'regional expression pattern' and ('ubiquitously expresses' some 'feature X') and ('part of' some 'adult brain') SubClassOf 'part of' some 'expression pattern of X in adult brain'
 GCI: cell and (' ubiquitously expresses' some 'feature X') and ('part of' some 'adult brain') SubClassOf 'part of' some 'expression pattern of X in adult brain'
 
+This second pattern is useful for grouping images of patterns by anatomical region.
 
 ## Mapping from database tag-value annotations
 
