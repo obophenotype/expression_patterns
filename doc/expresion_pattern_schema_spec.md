@@ -38,17 +38,19 @@ i.e. at the cellular level, an expression pattern is binary.   Note that 'expres
 
 We can distinguish a whole expression pattern from a regional expression pattern.  The former consists of all cells in an animal that express a specific gene product. The latter consists of all cells in some specific anatomical structure that express a specific gene product.  For example the regional expression pattern of the Notch gene in the adult brain is the the mereological sum of all cells in the adult brain that express Notch.
 
-'complete expression pattern of X':  The mereological sum of all cells in an organism (at all stages) that express X.
-EquivalentTo: 'complete expression pattern' that 'EquivalentTo expresses' some X
-GCI: cell and (expresses some X) SubClassOf 'part of' some 'expression pattern of X'
-GCI: 'regional expression pattern' and (ubiquitously_expresses some 'feature X') SubClassOf 'part of' some 'expression pattern of X'
+* 'complete expression pattern of X':  The mereological sum of all cells in an organism (at all stages) that express X.
+  * _EquivalentTo_: 'complete expression pattern' that 'EquivalentTo expresses' some X
+  * _GCI_: cell and (expresses some X) SubClassOf 'part of' some 'expression pattern of X'
+  * _GCI_: 'regional expression pattern' and (ubiquitously_expresses some 'feature X') SubClassOf 'part of' some 'expression pattern of X'
+  
+Classes following this pattern can be used to aggregate axioms recording the expression of gene X. The second GCI can be used  
 
-'expression pattern of X in adult brain': 
-EquivalentTo: 'regional expression pattern' that ('ubiquitously expresses' some X) and ('part of'^^ some 'adult brain')
-GCI: 'regional expression pattern' and ('ubiquitously expresses' some 'feature X') and ('part of' some 'adult brain') SubClassOf 'part of' some 'expression pattern of X in adult brain'
-GCI: cell and (' ubiquitously expresses' some 'feature X') and ('part of' some 'adult brain') SubClassOf 'part of' some 'expression pattern of X in adult brain'
+* 'expression pattern of X in adult brain': 
+  * _EquivalentTo_: 'regional expression pattern' that ('ubiquitously expresses' some X) and ('part of'^^ some 'adult brain')
+  * _GCI_: 'regional expression pattern' and ('ubiquitously expresses' some 'feature X') and ('part of' some 'adult brain')   SubClassOf 'part of' some 'expression pattern of X in adult brain'
+  * _GCI_: cell and (' ubiquitously expresses' some 'feature X') and ('part of' some 'adult brain') SubClassOf 'part of' some 'expression pattern of X in adult brain'
 
-This second pattern is useful for grouping images of patterns by anatomical region.
+This second pattern is useful to provide a more precuuse grouping images of patterns by anatomical region (e.g. one correponding to an image registration template). 
 
 ## Mapping from database tag-value annotations
 
@@ -56,19 +58,36 @@ Many databases contain annotations recording the localization of expression.  Th
 
 It may be foolish to specify a universal mapping from such annotations, but:
 
-It seems reasonable to assume that RNA localization to cells corresponds to sites of expression, whereas protein localization does not necessarily correspond.  Annotation with a class term does not necessarily indicate localization to all subclasses of that structure, but we can record 
+It seems reasonable to assume that, in the vast majority of cases, RNA localization to cells corresponds to sites of expression, whereas protein localization does not necessarily correspond.  Annotation with a class term does not necessarily indicate localization to all subclasses of that structure
 
-Annotation:  'RNA product of gene X' - 'Cell class Y' -> OWL:
-'expression pattern of gene X' SubClassOf has_part some Y
+Annotation:  'RNA product of gene X' - 'Cell class Y' -> 
+OWL:'expression pattern of gene X' SubClassOf has_part some Y
 
-Annotation: 'RNA product of gene X'  - 'multicellular anatomical structure Y' -> OWL":
-'expression pattern of gene X' SubClassOf overlaps some 'multicellular anatomical structure Y'
+Annotation: 'RNA product of gene X'  - 'multicellular anatomical structure Y' -> 
+OWL:'expression pattern of gene X' SubClassOf overlaps some 'multicellular anatomical structure Y'
 
-With these patterns. Querying for expression patterns is straightforward and requires no anatomy pre-query
+Many databases also contain information about stages of expression.  In OWL we can express this with an anonymous class:
 
-'expression pattern' that overlaps some X is sufficient. 
+Annotation: 'RNA product of gene X' ; 'multicellular anatomical structure Y' ; larval stage -> 
+OWL:'expression pattern of gene X' SubClassOf overlaps some ('multicellular anatomical structure Y' that 'exists during' some 'larval stage'
 
-But if users are interested in genes?  How do we get a list of these?  With a graph database, one can run a pattern match to navigate back over 'ubiquitously expresses' relations to find a transgene. 
+With these patterns. Querying for expression patterns is straightforward and requires no anatomy pre-query.
+
+'expression pattern' that overlaps some X is sufficient
+
+But if users are interested in genes?  How do we get a list of these?  With a graph database, one can run a pattern match to navigate back over 'ubiquitously expresses' relations to find a transgene.  Results lists can then include both
+
+The pure OWL approach has a couple of disadvantages:  
+
+* Given that these datasets can get very large, OWL reasoning may not be an optimal approach for querying.   
+* OWL axioms can be annotated to record supporting references, but returning these from queries is not straightforward.
+
+An alternative approach is to use a graph database or triples store + graph pattern matching. For example, one can use an OWL query for the  the first step: returning a list of structures that overlap some structure X with the final step relying on graph pattern matching.  This has the advantage that it is easy to return supporting references and other metadata from multiple nodes in the graph match pattern.  An example of this type of representation can be see in this GraphGist: 
+
+http://portal.graphgist.org/graph_gists/1cead583-7fdf-4f4d-95c8-07b828168b8c
+
+The two approaches can potentially be combined using a pre-reasoned triple store such as RDFox.
+
 
 
 
