@@ -2,11 +2,11 @@ pattern_name: expression_pattern_of_x
 
 classes: 
     complete expression pattern: CARO_ # TBA
-    gene: SO_
-    cell: FBbt  # CL for generic
+    gene: SO_0000704
+    native cell: CL:0000003  # Drosophila version should use FBbt: cell
     
 relations:
-    'ubiquitously expresses': RO_
+    ubiquitously expresses: RO_0002293
     part of: BFO_0000050
 
 vars: 
