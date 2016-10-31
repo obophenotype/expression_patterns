@@ -36,9 +36,10 @@ owl_axioms:
         text: "'cell' that 'expresses' some %s subClassOf 'part of' some %s"
         vars:
             - expressed_feature
-            - self # Extension to pattern language needed.
+            - self # refers to the instance of the pattern.  Extension to pattern language needed.
     - GCI:
-        text: "'regional expression pattern' that ''ubiquitously expresses' some %s SubClassOf 'part of' some ('complete expression pattern' that 'ubiquitously expresses' some %s)"
+        text: "'regional expression pattern' that ''ubiquitously expresses' some %s SubClassOf 'part of' some %s"
         vars:
             - expressed_feature
+            - self # 
     
