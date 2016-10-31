@@ -14,4 +14,4 @@ Example use cases:
 * /doc -  Spec drafts 
 * /patterns: - Design patterns (DOSDPs) live in []()
 * /owl - OWL test ontologies
-* /papers - A draft paper  
+
