@@ -84,7 +84,11 @@ The pure OWL approach has a couple of disadvantages:
 
 An alternative approach is to use a graph database or triples store + graph pattern matching. For example, one can use an OWL query for the  the first step: returning a list of structures that overlap some structure X with the final step relying on graph pattern matching.  This has the advantage that it is easy to return supporting references and other metadata from multiple nodes in the graph match pattern.  An example of this type of representation can be see in this GraphGist: 
 
+![image](https://cloud.githubusercontent.com/assets/112839/19857275/febda88a-9f74-11e6-9fa0-01b1c58b0463.png)
+
 http://portal.graphgist.org/graph_gists/1cead583-7fdf-4f4d-95c8-07b828168b8c
+
+The graph database approach here suffers from the disadvantage that intermediate nodes need to be instantiated to deal with staging.  On the plus side, it is straightforward to use Neo4J infer intermediate stages of expression when a stage range is given, as long as the stage ontology records temporal ordering, something that is surprisingly hard in OWL.
 
 The two approaches can potentially be combined using a pre-reasoned triple store such as RDFox.
 
