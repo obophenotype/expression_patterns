@@ -25,9 +25,9 @@ An expression pattern consists of the mereological sum of all cells expressing s
 
 We define the relations:
 
-* 'expresses': Y expresses X if and only if there is a gene expression process (GO:0010467) that occurs in y and x is a gene (or transgene) that is transcribed into a transcript as part of that gene expression process.
+* 'expresses': Y expresses X if and only if there exists a gene expression process (GO:0010467) that occurs in y and x is a gene (or transgene) that is transcribed into a transcript as part of that gene expression process.
 
-* X ubiquitously expresses Y iff:  Y is a [gene](http://www.ebi.ac.uk/ols/ontologies/so/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FSO_0000704) X a multicellular anatomical structure. (['gene expression'](http://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FGO_0010467) and 'has input' Y) 'occurs' in (all cells that are part of X)
+* X ubiquitously expresses Y iff:  Y is a [gene](http://www.ebi.ac.uk/ols/ontologies/so/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FSO_0000704); X is a multicellular anatomical structure; (['gene expression'](http://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FGO_0010467) and 'has input' Y) 'occurs' in (all cells that are part of X)
    * subPropertyOf expresses
 
 i.e. at the cellular level, an expression pattern is binary.   Note that 'expresses' applies if just one expressing cell is present.   So if X and Y are multicellular structures and X overlaps Y and X ubiquitously expresses gene A then we can (reasonably safely^) infer:
