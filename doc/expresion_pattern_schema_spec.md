@@ -1,6 +1,6 @@
 ## Aims
 
-Expression data can take many forms:  Annotations with ontology terms; expression pattern images in 2D or 3D, registered to a reference standard or unregistered; Image of single labelled cells or clones of cells that make up some part of an expression pattern; RNA seq data for identified tissues, groups of cells or single cells.
+Expression data can take many forms:  assertions made via annotations using ontology terms; expression pattern images in 2D or 3D, registered to a reference standard or unregistered; images of single labelled cells or clones of cells that make up some part of an expression pattern; RNA seq data for identified tissues, groups of cells or single cells.
 
 The aim of this site is to document semantic patterns that can be used to relate annotations to images, samples or drawn from papers so that the data from all of them can be integrated into a queryable whole.
 
@@ -20,15 +20,14 @@ The semantics here are defined using OWL 2.0, assuming an EL profile for tractab
 
 We distinguish between an expression pattern and a localization pattern:  
 
-An expression pattern consists of the mereological sum of all cells expressing some specific gene product in an organism or in some specified region of an organism.  A localization pattern is the pattern of localization of a gene product at the cellular or or subcellular level. It may include non-cellular structures and structures distant from the site of expression.  
-
+An expression pattern consists of the mereological sum of all cells expressing some specific gene product in an organism or in some specified region of an organism.  A localization pattern is the pattern of localization of a gene product at the cellular or or subcellular level. It may include non-cellular structures and structures distant from the site of expression. 
 
 We define the relations:
 
 * 'expresses': Y expresses X if and only if there exists a gene expression process (GO:0010467) that occurs in y and x is a gene (or transgene) that is transcribed into a transcript as part of that gene expression process.
 
 * X ubiquitously expresses Y iff:  Y is a [gene](http://www.ebi.ac.uk/ols/ontologies/so/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FSO_0000704); X is a multicellular anatomical structure; (['gene expression'](http://www.ebi.ac.uk/ols/ontologies/go/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FGO_0010467) and 'has input' Y) 'occurs' in (all cells that are part of X)
-   * subPropertyOf expresses
+   * subPropertyOf expresses  
 
 i.e. at the cellular level, an expression pattern is binary.   Note that 'expresses' applies if just one expressing cell is present.   So if X and Y are multicellular structures and X overlaps Y and X ubiquitously expresses gene A then we can (reasonably safely^) infer:
 
@@ -50,7 +49,7 @@ Classes following this pattern can be used to aggregate axioms recording the exp
   * _GCI_: 'regional expression pattern' and ('ubiquitously expresses' some 'feature X') and ('part of' some 'adult brain')   SubClassOf 'part of' some 'expression pattern of X in adult brain'
   * _GCI_: cell and (' ubiquitously expresses' some 'feature X') and ('part of' some 'adult brain') SubClassOf 'part of' some 'expression pattern of X in adult brain'
 
-This second pattern is useful to provide a more precuuse grouping images of patterns by anatomical region (e.g. one correponding to an image registration template). 
+This second pattern is useful to provide a more precise grouping images of patterns by anatomical region (e.g. one correponding to an image registration template). 
 
 ## Mapping from database tag-value annotations
 
