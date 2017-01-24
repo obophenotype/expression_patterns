@@ -41,8 +41,14 @@ We can distinguish a whole expression pattern from a regional expression pattern
 
 * 'complete expression pattern of X':  The mereological sum of all cells in an organism (at all stages) that express X.
   * _EquivalentTo_: 'complete expression pattern' that 'EquivalentTo expresses' some X
-  * _GCI_: cell and (expresses some X) SubClassOf 'part of' some 'expression pattern of X'
-  * _GCI_: 'regional expression pattern' and (ubiquitously_expresses some 'feature X') SubClassOf 'part of' some 'expression pattern of X'
+  * _GCI_: cell and (expresses some X) SubClassOf 'part of' some 'complete expression pattern of X'
+  * _GCI_: 'regional expression pattern' and (ubiquitously_expresses some 'feature X') SubClassOf 'part of' some 'complete expression pattern of X'
+  
+  
+        DL alternative:
+	 'expression pattern of X' SubClassOf*: 'expression pattern' and has_part some ('cell that expresses some X) 
+	 and (has_part only 'cell that expresses some X').  
+	 \* Equivalent probably too strong here as doesn't express that all cells  
   
 Classes following this pattern can be used to aggregate axioms recording the expression of gene X. The second GCI can be used  
 
